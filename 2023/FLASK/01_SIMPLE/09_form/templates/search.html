@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}Form Hello!{% endblock title %}
+
+{% block main %}
+
+    <h1>Search on google</h1>
+    <form action="{{url_for('search')}}">
+        <input type="text" name="query" placeholder="Search anything" autocomplete="off" required autofocus>
+        <button>submit</button>
+    </form>
+
+{% endblock main %}
