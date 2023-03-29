@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Card</title>
+ 
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+        body{
+            background-color: #6096B4;
+            height: 100vh;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+
+        }
+
+        .form {
+            display: flex;
+            border-radius: 30px;
+            opacity: 50%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #title {
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bolder;
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+            color: #93BFCF;
+            font-size: 50px;
+        }
+
+
+        #input {
+            background-color: #EEE9DA;
+            border-radius: 30px;
+            width: 1080px;
+            height: 50px;
+            border-color:  #6096B4 ;
+            border: 5px;
+            padding: 5px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        #submit-btn{
+            background-color: #93BFCF;
+            border-radius: 30px;
+            width: 140px;
+            height: 50px;
+            border-color: #6096B4;
+            border: 5px;
+            margin-left: 10px;
+            color: #EEE9DA;
+            font-size: 20px;
+            font-weight: bolder;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #submit-btn:hover {
+            background-color: #BDCDD6;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            background-color: #93BFCF;
+            width: 97%;
+            height: 70vh;
+            list-style: none;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: #EEE9DA;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 5px;
+            border-radius: 30px;
+            padding: 20px 20px 20px 20px;
+        }
+
+        li {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 10px;
+        }
+
+        #del-btn {
+            display: flex;
+            width: 40px;
+            height: 40px;
+            background-color: #BDCDD6;
+            border-radius: 30px;
+            border: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #del-btn:hover {
+            background-color: red;
+        }
+
+        #number-task {
+            display: flex;
+            justify-content: center ;
+            color: #93BFCF;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+ 
+        class App extends React.Component {
+            
+            constructor(props){
+                super(props);
+                this.state = {
+                    tasks : ["task-one", "task-two", "task-three"],
+                    input : ""
+                }
+            }
+
+            
+
+            render = () => {
+                return (
+                    <div  classname="container">
+                        <h1 id="title">TO DO LIST</h1>
+                        <div classname="form">
+                            <input type="text" value={this.state.input} onChange={this.handleInput} id="input"/>
+                            <button onClick={this.addTask} id="submit-btn">ADD TASK</button>
+                        </div>
+                        <div classname="task-container">
+                            <ul classname="list">
+                            {this.state.tasks.map((task, i) =>(
+                                <li key={i} classname="list-item">
+                                    <span>{task}</span>
+                                    <button onClick={()=>{this.deleteTask(i)}} id="del-btn">
+                                        <box-icon name='trash'></box-icon>
+                                    </button>
+                                    
+                                    
+                                </li>
+                            ))}
+                            </ul>
+                        </div>
+                        
+                       
+                        <p id="number-task">Number of task : {this.state.tasks.length}</p>
+                    </div> 
+                )
+            }
+
+            handleInput = event =>{
+                this.setState({
+                    input: event.target.value
+                })
+            }
+
+            addTask = () =>{
+                this.setState (state =>({
+                    tasks : [...state.tasks, state.input],
+                    input : ""
+                }))
+            }
+
+            deleteTask = index =>{
+                this.setState(state=>{
+                    const tasks = [...state.tasks];
+                    tasks.splice(index, 1);
+                    return {
+                        tasks : tasks
+                    }
+                })
+            }
+ 
+        }
+ 
+        ReactDOM.render(<App />, document.getElementById("app"));
+    </script>
+ 
+ 
+</body>
+</html>
