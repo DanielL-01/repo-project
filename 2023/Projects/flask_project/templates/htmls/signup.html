@@ -1,0 +1,34 @@
+{% extends 'html_layout.html' %}
+
+{% block title %}SIGN UP{% endblock title %}
+
+{% block main %}
+
+
+<div class="signup">
+  <h1 class="log-sign">Sign Up</h1>
+  <h4 class="tag-line">It's free and only takes a minute</h4>
+  <hr class="hr-sign">
+  <form>
+    <label>First Name</label>
+    <input type="text" placeholder="" required autofocus/>
+    <label>Last Name</label>
+    <input type="text" placeholder="" required/>
+    <label>Email</label>
+    <input type="email" placeholder="" required/>
+    <label>Password</label>
+    <input type="password" placeholder="" required/>
+    <label>Confirm Password</label>
+    <input type="password" placeholder="" />
+    <input type="submit" value="Sign Up" class="SU"/>
+  </form>
+  <p>
+    By clicking the Sign Up button,you agree to our <br/>
+    <a href="#" class="termsandcon">Terms and Condition</a> and <a href="#">Policy Privacy</a>
+  </p>
+</div>
+<p class="alred">
+  Already have an account? <a href="{{ url_for('html_file', file='login')}}">Login here</a>
+</p>
+
+{% endblock main %}
