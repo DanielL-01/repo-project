@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Navigation</title>
+    <style>
+        body {
+            font: 12pt Helvetica, sans-serif;
+        }
+        nav {
+            width: 150px;
+            float: left;
+            margin-right: 20px;
+            margin-top: 12px;
+
+        }
+        nav ul li {
+            border-bottom: 1px solid black;
+        }
+
+        nav ul {
+            list-style-type: none;
+            
+
+        }
+        nav ul li a {
+            text-decoration: none;
+        }
+        nav ul li a:link, nav ul li a:visited{
+            background-color: #628794;
+            color: white;
+            display: block;
+            font-weight: bold;
+            padding-top: 3px;
+            padding-bottom: 3px;
+
+            font-size: 10pt;
+        }
+        nav ul li a:hover, nav ul li a:active {
+            background-color: white;
+            color: black;
+            display: block;
+            font-weight: bold;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            font-size: 10pt;
+        }
+        nav ul ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav ul ul li a{
+            padding-left: 5px;
+        }
+
+        section.main {
+            width: 800px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Executive Team</a></li>
+                <ul>
+                    <li><a href="#">&raquo; CEO</a></li>
+                    <li><a href="#">&raquo; CFO</a></li>
+                    <li><a href="#">&raquo; COO</a></li>
+                    <li><a href="#">&raquo; Other</a></li>
+                </ul>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+    <section class="main">
+        <header>
+            <h1>About Us</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus sapiente, illum modi quo reiciendis natus temporibus impedit quasi rem animi nihil, non consequuntur. Debitis odit quod voluptatibus harum, in aliquid officiis inventore aliquam, eos obcaecati neque ex nemo non! Incidunt hic enim quam officia esse. Animi cumque at ullam vel.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Rem natus, harum esse non eveniet, molestias, minus accusamus facere beatae qui reprehenderit? Consequuntur magnam nesciunt illum labore corporis obcaecati veritatis numquam pariatur dolor assumenda rerum, neque nemo consectetur eveniet, repellat sapiente commodi. Temporibus ab incidunt architecto a quam rem tempore reiciendis.
+            </p>
+            <ul>
+                <li>
+                    <p>
+                        <a href="#">Mission</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur libero delectus nesciunt animi quas, voluptatum quis consectetur praesentium expedita in quibusdam eum cumque aliquam corporis temporibus id qui omnis sed esse rerum culpa obcaecati! Voluptatem deleniti, odit soluta harum error, sapiente facilis aliquid officia quo amet sed illo eum commodi!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">History</a>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam, sapiente. Quas esse recusandae, voluptas est perferendis eius, vel asperiores error doloremque nihil porro rem dolor molestias. Aliquid id ad, quae quibusdam a officia perspiciatis, voluptatibus nobis rem quas aperiam sit labore at repudiandae ducimus illum nisi nulla saepe quo mollitia.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">Executive</a>
+                        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere maiores vitae quia quasi dolor eligendi molestiae ipsum, exercitationem ex numquam quam totam quaerat atque ab natus maxime tempora placeat repellat nesciunt veniam minima. Ipsa, neque beatae totam obcaecati recusandae voluptatem, ea ullam a eveniet, in cupiditate quos dolorem omnis laudantium.
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">About Us</a>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eum enim dolor molestias commodi rerum, maiores quas nam molestiae amet voluptatibus voluptate nemo et dolore voluptatum provident culpa eligendi, veritatis quis pariatur dignissimos. Eveniet sequi fugit dolorem itaque consequuntur hic voluptas esse quia cupiditate, aut minima ullam veritatis earum, architecto voluptatum.
+                    </p>
+                </li>
+            </ul>
+        </header>
+    </section>
+</body>
+</html>

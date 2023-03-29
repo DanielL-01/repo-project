@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            float: left;
+            background-color: plum;
+            height: 50px;
+        }
+        header > img, header > h1 {
+            height: 10px;
+            display: inline;
+        }
+        header > img {
+            height: 50px;
+
+        }
+        
+        footer{
+            width: 100%;
+            background-color: #cccccc;
+            text-align: center;
+            font-style: italic ;
+        }
+        section.main {
+            width: 100%;
+            display: table;
+        }
+        article, aside.left, aside.right {
+            display: table-cell;
+        }
+        aside.left {
+            width: 200px;
+            background-color: #52f471;
+        }
+
+        aside.right {
+            width: 125px;
+            background-color: #f452d5;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/778920496737681411/1010124159197663312/Image015.jpg" alt="">
+        <h1>Welcome to IGS</h1>
+    </header>
+    <section class="main">
+        <aside class="left">
+            <ul>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </aside>
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est harum mollitia veritatis dolor obcaecati natus pariatur! Optio, deserunt voluptas, blanditiis obcaecati unde consequuntur adipisci distinctio rem dolorem ea similique quod quidem rerum soluta hic laborum asperiores molestias quas non quam. Doloremque dolores deserunt officiis inventore fuga quia, laboriosam voluptatem quibusdam, praesentium illum hic quas blanditiis voluptates debitis ipsam aspernatur deleniti ducimus in beatae saepe quod cum mollitia? Quas at error, id est esse eaque! Nemo distinctio placeat mollitia ex dicta nesciunt impedit. Laudantium magni quia officia numquam quos dolore nihil ab, exercitationem provident quo! Tempore odio quae libero minus quod.
+
+            </p>
+        </article>
+        
+        <aside class="right">
+            <p><strong>Special Promo</strong></p>
+            <p>The best choice to The best future</p>
+        </aside>
+    </section>
+    <footer>
+        <p>
+            Copyright information usually goes down here.
+        </p>
+    </footer>
+
+</body>
+</html>

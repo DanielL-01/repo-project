@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sun and moon</title>
+    <style>
+        body {
+            animation: background_transition 10s ease infinite;
+        }
+
+        .circle{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            display: flex;
+            position: absolute;
+            animation: rotation 10s linear infinite;
+            
+        }
+        @keyframes rotation {
+            0% {
+               left: 0%;
+               top: 100%;
+               background-color: yellow;
+            }
+            
+
+            11% {
+                left: 25%;
+                top: 37.5%;
+            }
+
+            22% {
+                left: 50%;
+                top: 0%;
+            }
+
+            33%{
+                left: 75%;
+                top: 37.5%;
+            }
+
+            44% {
+               left: 100%;
+               top: 100%;
+               background-color: yellow;
+            }
+
+            45%{
+                left: 0%;
+                top: 100%;
+                background-color: rgb(125, 123, 123);  
+            }
+        
+            55% {
+               left: 0%;
+               top: 100%;
+               background-color: rgb(125, 123, 123);
+            }
+            
+
+            66% {
+                left: 25%;
+                top: 37.5%;
+            }
+
+            77% {
+                left: 50%;
+                top: 0%;
+            }
+
+            88%{
+                left: 75%;
+                top: 37.5%;
+            }
+
+            100% {
+               left: 100%;
+               top: 100%;
+               background-color: rgb(125, 123, 123);
+            }
+        }
+        @keyframes background_transition {
+            
+            0% {
+                background-color: orange;
+
+            }
+
+            25% {
+                background-color: lightskyblue;
+            }
+
+            50% {
+                background-color: orangered;
+            }
+            75% {
+                background-color: darkblue;
+            }
+
+            95% {
+                background-color: rgb(4, 4, 177);
+            }
+
+            100% {
+                background-color: orange;
+            }
+        }
+    
+    </style>
+    
+</head>
+<body>
+    <div class="circle"></div>    
+</body>
+</html>

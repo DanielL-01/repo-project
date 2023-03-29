@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyframes</title>
+    <style>
+        .box {
+            width: 10rem;
+            height: 10rem;
+            border: 3px solid black;
+            margin: 3rem auto;
+            background-color: crimson;
+            animation: myAnimation 1s infinite;
+            animation-direction: alternate;
+        }
+
+        @keyframes myAnimation {
+            from {
+                background-color: crimson;
+                 transform: scale(0.5);
+            }
+
+            to {
+                background-color: cadetblue;
+                transform: scale(1.5);
+            }
+
+            to {
+                background-color: aliceblue;
+                transform: scale(1.5);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

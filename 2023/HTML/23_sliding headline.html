@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding Headline</title>
+    <style>
+        .circle {
+            height: 50px;
+            width: 50px;
+            background-color: crimson;
+            border-radius: 50%;
+            display: flex;
+            position: absolute;
+            animation: slidingDown 5s infinite;
+        }
+
+        @keyframes slidingDown {/*
+            0% {
+                transform: translateX(800px);
+                transform: translateY(0px);
+            }
+
+            25% {
+                transform: translateX(800px);
+                transform: translateY(525px);
+            }
+
+            50% {
+                transform: translateX(800px);
+            }
+
+            75% {
+                transform: translateX
+            }*/
+            0%{
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+
+            25%{
+                background: yellow;
+                left: 300px;
+                top: 0px;
+            }
+
+            50%{
+                background: blue;
+                left: 300px;
+                top: 300px;
+            }
+
+            75%{
+                background: green;
+                left: 0px;
+                top: 300px;
+            }
+
+            100%{
+                background: red;
+                left: 0px;
+                top: 0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="circle"></div>
+    
+</body>
+</html>

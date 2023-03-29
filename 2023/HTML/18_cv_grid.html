@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV grid</title>
+    <style>
+         body{
+            margin: 0;
+            padding: 0;
+        }
+        header{
+            width: 100%;
+            float: left;
+            background-color: rgb(74, 70, 70);
+            font-family: Arial, sans-serif;
+
+        }
+        header > nav {
+            background-color: orange;
+        }
+
+        header nav ul.container {
+            list-style-type: none;
+            display: grid;
+            grid-template-columns: auto auto auto auto auto;
+            text-align: center;
+        }
+
+        header nav ul li  a{
+            text-decoration: none;
+            color: white;
+        }
+
+        header nav ul li  a:hover{
+            text-decoration: none;
+            color: black;
+        }
+
+        header nav ul li{
+            display: inline;
+
+        }
+
+        section.main {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 33% 66% ;
+            grid-template-areas: "left main";
+            column-gap: 10px;
+        }
+        aside.left {
+            grid-area: left;
+            text-align: center;
+            background-color: rgb(174, 178, 181);
+            font-family: 'Times New Roman', serif;
+        
+        }
+
+        aside.left > img{
+            height: 100px;
+            width: 200px;
+            margin-top: 50px;
+        
+        }
+        
+        aside.left > img:hover {
+            transform: rotate(360deg);
+            transition-duration: 2s;
+            transition-timing-function: linear;
+        }
+
+        article {
+            grid-area: main;
+            font-family:Arial, sans-serif;
+            font-size: 12px;
+            
+        }
+
+        footer{
+            width: 100%;
+            background-color: #cccccc;
+            text-align: center;
+            font-style: italic ;
+        }
+    
+    </style>
+</head>
+<body>
+    <header>
+        <h1 style="text-align: center; color: orange;">Daniel Lee's CV</h1>
+        <nav>
+            <ul class="container">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Me</a></li>
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">Facebook</a></li>
+            </ul> 
+        </nav>
+    </header>
+    <section class="main">
+        <aside class="left">
+            <img src="https://cdn.discordapp.com/attachments/778920496737681411/1010124159197663312/Image015.jpg" alt="">
+            <h1>Name    :Daniel </h1>
+            <h1>Age     :16</h1>
+            <h1>Gender  :male</h1>
+        </aside>
+        <article>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sapiente, excepturi itaque fugiat eveniet hic totam reiciendis ipsum quam iure, amet ratione. Dignissimos ratione asperiores velit cupiditate explicabo rem vel autem quae eligendi vero. Minima repellendus dolor culpa quis laudantium, illum nulla voluptate accusantium. Cupiditate omnis libero, quia velit sunt ipsum sapiente enim, iure assumenda optio laboriosam dolor sint laudantium voluptatem hic sit animi doloremque error, facilis quasi iste. Eveniet, atque ut quasi, dignissimos magnam similique nihil sint quia, veniam doloremque in assumenda sapiente? Suscipit earum odit et. Qui amet voluptates laudantium unde minus, omnis sed distinctio culpa, necessitatibus, laborum facilis ipsa vel. Recusandae saepe explicabo nesciunt porro beatae! Aspernatur voluptatum in voluptatibus quae culpa animi nostrum. Iste, quisquam nisi. Eaque ex illo dicta nobis laborum cum culpa fugiat, provident minima modi obcaecati, dignissimos expedita at animi dolores quisquam harum ratione consequuntur iure ducimus explicabo. Unde impedit inventore, modi nesciunt debitis commodi maxime, natus beatae, perspiciatis molestiae quaerat saepe cumque dolores mollitia ad voluptas labore officia est deserunt voluptatibus quasi aspernatur! Nostrum saepe, non, eaque sapiente aspernatur repudiandae, quia alias provident atque animi inventore recusandae reiciendis nam? Fugit corporis temporibus at recusandae architecto magni dolores tempore aspernatur obcaecati hic eum commodi et est, non vero quae assumenda sapiente ratione aut, soluta veniam esse velit! Veniam dolore nostrum quam sunt tempora at numquam minus! Ratione reprehenderit saepe facere necessitatibus sapiente, officia esse dolor facilis, dolorem incidunt voluptatibus obcaecati! Molestiae impedit, dolorem, corrupti similique maxime vitae perferendis quis aspernatur doloremque unde neque facilis accusamus minus natus praesentium placeat quos temporibus aperiam repellat cumque! Assumenda facere soluta adipisci dolor quis voluptates illo nam omnis repellat voluptatibus iusto porro nesciunt at, vel molestias nostrum quisquam ipsum quae, enim minima minus nulla. Fugiat quam magni ipsa autem officiis ab eveniet. Aliquam est sed ipsam pariatur nihil.</p>
+
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore enim atque nemo magni. Maiores neque quibusdam reprehenderit cum, in id labore placeat enim voluptate ipsa accusantium minus necessitatibus velit iste eius ducimus quidem blanditiis consequuntur, illo optio quos. Quia officia culpa, voluptate eum, sint hic veritatis sapiente necessitatibus debitis, ut laborum! Quod neque laboriosam, maxime fuga modi repudiandae aspernatur dolor omnis eum quos maiores quisquam nobis, deserunt recusandae iste commodi deleniti ullam, eos reprehenderit a iusto minima et illum. Nostrum libero, id soluta quod explicabo quaerat pariatur dolorem, doloribus blanditiis dolorum vitae, veritatis odit iure autem officia dolore! Aspernatur, eius.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae repellat harum, exercitationem placeat vel doloremque nobis alias excepturi necessitatibus porro.</p>
+
+        </article>
+    </section>
+    <footer>
+        <p>footer</p>
+    </footer>
+
+    
+</body>
+</html> 
