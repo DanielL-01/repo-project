@@ -1,0 +1,51 @@
+.container {
+		width: 800px;
+		display: flex;
+		justify-content: center;
+		margin-top: 5em;
+		margin-left: auto;
+		margin-right: auto;
+
+		border:  5px solid black;
+	}
+canvas {
+	background-color: #87CEFA;
+}
+
+#start_button{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+#entry-task{
+	margin-left: 17em;
+	margin-right: auto;
+}
+#submit-task{
+	margin-right: auto;
+}
+#scoreboard{
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	display: block;
+}
+
+#players{
+	display: inline-block;
+	margin-right: auto;
+	margin-left: 33em;
+	text-align: left;
+}
+#scores{
+	list-style: none;
+	display: inline-block;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: left;
+}
+li{
+	font-family: fantasy ;
+}
+
