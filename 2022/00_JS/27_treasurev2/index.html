@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Find The Treasure</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h1>Find my pokemon ...</h1>
+	<p id="message">Number of attempts left: <span id="attempts">10</span>........... <span id="con"></span></p>
+	<img src="kanto_map.jpg">
+	
+	<script type="text/javascript">
+		//console.log($('img').position().left, $('img').position().top)
+		let width = $("img").width();
+		let height = $("img").height();
+
+		function getRandomNumber(init_position, size) {
+			return Math.floor(Math.random()*size) + Math.ceil(init_position)
+		}
+
+
+		//console.log(height)
+		let target = {
+			x : getRandomNumber($("img").position().left, width),
+			y : getRandomNumber($('img').position().top, height)
+		}
+
+	    function getDistance(event, target) {
+	    	let dx = event.pageX - target.x;
+	    	let dy = event.pageY - target.y;
+	    	return Math.sqrt((dx*dx)+(dy*dy))
+
+	    }
+
+		//console.log(target)
+		function getMessage(distance) {
+						
+			if (distance < 20){
+				return "it's next to you"
+			} else if (distance<40){
+				return "it's really close"
+			} else if (distance<80){
+				return "it's quite close"
+			} else if (distance<160){
+				return "it's near"
+			} else if (distance<320){
+				return "it's getting further away from you"
+			} else {
+				return "it's so far that you can't possibly catch it"
+			}
+		}
+	
+
+		let attempts = 10
+		while (attempts != 0){
+			$('img').click(function(event) {
+				attempts--;
+				let distance = getDistance(event, target);
+				let message = getMessage(distance);
+				$("#attempts").text(attempts);
+				$("#con").text(message);
+				})
+			if (attempts <= 0){
+			 	alert("You didn't find my pokemon")
+		}
+			
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Car Object</title>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		//constructor ~ def __init__ di python
+
+		class Car {
+			constructor (x,y) {
+				this.x = x;
+				this.y = y;
+				this.odometer = 0;
+				this.speed = 100;
+			}
+
+			draw(){
+				let carImg="<img src='car.png' >"
+
+				this.carElement = $(carImg);
+				this.carElement.css({
+					position : "absolute",
+					left : this.x,
+					top : this.y
+				})
+
+				$("body").append(this.carElement);
+			}
+			moveRight(){
+				this.x += this.speed;
+				this.carElement.css({
+					left : this.x
+				})
+				this.odometer += this.speed
+			}
+			moveLeft(){
+				this.x -= this.speed;
+				this.carElement.css({
+					left : this.x
+				})
+				this.odometer += this.speed 
+			}
+			moveUp(){
+				this.y -= this.speed;
+				this.carElement.css({
+					top : this.y
+				})
+				this.odometer += this.speed 
+			}
+			moveDown(){
+				this.y += this.speed;
+				this.carElement.css({
+					top : this.y
+				})
+				this.odometer += this.speed 
+			}
+		}
+		Car.prototype.readOdometer = function() {
+			console.log(`Car : ${this.odometer} miles.`)
+		}
+
+		function stop() {
+			clearInterval(mainloop)
+		}
+
+		let tesla = new Car(100,200)
+		tesla.draw();
+		//tesla.moveRight();
+		//tesla.moveLeft()
+		
+		//function run(){
+
+		
+		let mainloop = setInterval(function(){
+			tesla.moveRight()
+			if (tesla.x > 800){
+				tesla.x = 0;
+			}
+		}, 100);
+		tesla.readOdometer()
+		function stop() {
+			clearInterval(mainloop)
+		}
+
+
+	</script>
+	<button id="button" onclick="stop()">Stop</button>
+
+
+</body>
+</html>

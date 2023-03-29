@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Function Javascript</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		var ourFirstFunction = function() {
+			console.log("This is my first function");
+		}
+		ourFirstFunction();
+
+		var printingmultipletimes = function (howmanytimes, whattoprint){
+			for (var i = 0; i < howmanytimes; i++){
+				console.log(i + " " + whattoprint);
+			}
+
+		}
+		printingmultipletimes(5, "I love u");
+
+		var double = function(number){
+			return number*2;
+		}
+		console.log(double(3) + double(10));
+		var result = double(20);
+		console.log(result);
+
+		// shorthand, v ES6
+		function triple(number) {
+			return number*3
+		}
+
+		console.log(triple(100)); //300
+
+		function medal(pts){
+			if (pts<3){
+				return "Bronze";
+			} else if (pts<7){
+				return "Silver";
+			} else {
+				return"Gold";
+			}
+		}
+		console.log(medal(1))
+		console.log(medal(5))
+		console.log(medal(10))
+	</script>
+</body>
+</html>
