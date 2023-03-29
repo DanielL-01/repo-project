@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather - API</title>
+    <style>
+        body{
+            background-color: #7D5A50
+        }
+
+
+        .container {
+            width: 600px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10 10 10 10 ;
+            margin-left:auto;
+            margin-right: auto;
+        }
+        #city-name {
+            background-color: #E5B299;
+            opacity: 50%;
+            width: 480px;
+            height: 50px;
+            border: 2px solid #7D5A50;
+            border-radius: 30px;   
+            color: #FCDEC0;
+            padding-left: 20px;
+            font-size: 20px;
+            
+        }
+        #submit-btn {
+            background-color: #E5B299;
+            opacity: 50%;
+            width: 80px;
+            height: 50px;
+            border: 2px solid #7D5A50;
+            border-radius: 30px;
+            color: #FCDEC0;
+            font-size: 20px;
+            
+        }
+
+        .result {
+            width: 600px;
+            height: 90vh;
+            display: flex;
+            background-color: #E5B299;
+            flex-direction: column;
+            
+            align-items: center;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 70px;
+            border-radius: 50px;
+            opacity: 50%;
+            color: #FCDEC0;
+        }
+
+        #city {
+            font-size: 60px;
+            margin-top: 30px;
+            margin-bottom: 0px;
+        }
+
+        #temperature{
+            font-size: 200px;
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+
+        .weather_info{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #B4846C;
+            width: 300px;
+            border-radius: 30px;
+        }
+        
+        #weather{
+            font-size: 30px;
+            margin-top: 0px;
+            margin-bottom: 0px;
+        }
+        #weather_icon{
+            height: 50px;
+        }
+        #cloud{
+            font-size: 30px;
+            margin-top: 10px;
+            margin-bottom: 0px;
+            background-color: #B4846C;
+            width: 200px;
+            text-align: center;
+            border-radius: 30px;
+            height: 40px;
+        }
+    </style>
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <form action="" id="form-box">
+            <input type="text" value="" id="city-name" name="cityy" >
+            <button id="submit-btn">submit</button>
+        </form>
+    </div>
+    <div class="result">
+        <h1 id="city"></h1>
+        <p id="temperature"></p>
+        <div class="weather_info">
+            <p id="weather"></p>
+            <img id="weather_icon" src="" alt="">
+        </div>
+        <p id="cloud"></p>
+    </div>
+    <h1 id="city"></h1>   
+    <p></p>
+</body>
+</html>

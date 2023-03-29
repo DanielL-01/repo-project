@@ -1,0 +1,17 @@
+<!-- xml_info.xml -->
+
+<DATA>
+    <STUDENT>
+        <ID>A001</ID>
+        <NAME>Anas Azhar</NAME>
+        <CLASS>10 KOMPUTER</CLASS>
+        <YEAR>2023</YEAR>
+    </STUDENT>
+
+    <STUDENT>
+        <ID>A002</ID>
+        <NAME>Anas Budi</NAME>
+        <CLASS>10 TEKNIK</CLASS>
+        <YEAR>2023</YEAR>
+    </STUDENT>
+</DATA>
